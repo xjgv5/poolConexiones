@@ -11,7 +11,7 @@ import java.util.List;
 public class ProductoRepositorioImpl implements Repositorio<Producto> {
 
     private Connection obtenerConexion() throws SQLException {
-        return ConexionBaseDatos.getInstance();
+        return ConexionBaseDatos.getConection();
     }
     @Override
     public List<Producto> listar() {
